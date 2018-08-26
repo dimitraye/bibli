@@ -1,0 +1,18 @@
+<h1>Auteurs</h1>
+<ul>
+  <% @authors.each do |author| %>
+    <li><a href="/authors/<%= author.id %>"><%= "#{author.firstname} #{author.lastname}" %></a></li>
+  <% end %>
+</ul>
+
+<a href="authors/new">Ajouter un nouvel auteur</a>
+
+
+
+
+
+
+
+
+
+

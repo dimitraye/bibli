@@ -1,0 +1,13 @@
+<h1>Authors#show</h1>
+<p>Find me in app/views/authors/show.html.erb</p>
+<h1>Auteur</h1>
+
+<p>Id : <%= @author.id %></p>
+<p>Nom : <%= @author.firstname.capitalize %> <%= @author.lastname.upcase %></p>
+<p>E-mail : <%= @author.email %></p>
+
+<a href="/authors/edit/<%= @author.id %>"> Modifier </a><br>
+
+<a href="/authors/delete/<%= @author.id %>"> Supprimer l'auteur</a><br>
+
+<a href="/authors">Retourner à l'index</a>
