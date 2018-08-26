@@ -7,11 +7,11 @@ Rails.application.routes.draw do
 
   post 'authors/create' => 'authors#create'
 
-  get 'authors/edit/:id' =>'authors#edit'
+  get 'authors/edit/:id', to: 'authors#edit', as: 'author_edit'
 
   patch 'authors/:id' => 'authors#update'
 
-  get 'authors/delete/:id' =>'authors#destroy'
+  delete 'authors/:id' =>'authors#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
