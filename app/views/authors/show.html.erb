@@ -1,13 +1,26 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
-<h1>Auteur</h1>
+<div class="jumbotron">
+    <h1>Auteur</h1>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="glyphicon glyphicon-asterisk">
+       <%= @author.id %>
+      </span>
+    </li>
+    <li class="list-group-item">
+      <span class="glyphicon glyphicon-user">
+       <%= @author.firstname.capitalize %> <%= @author.lastname.upcase %>
+      </span>
+    </li>
+    <li class="list-group-item">
+      <span class="glyphicon glyphicon-envelope">
+       <%= @author.email %>
+     </span>
+    </li>
 
-<p>Id : <%= @author.id %></p>
-<p>Nom : <%= @author.firstname.capitalize %> <%= @author.lastname.upcase %></p>
-<p>E-mail : <%= @author.email %></p>
+    <%= link_to "Modifier", author_edit_path, class: "btn btn-warning"  %>
 
-<a href="/authors/edit/<%= @author.id %>"> Modifier </a><br>
+    <%= link_to "Supprimer l'auteur", author_path(@author), class: "btn btn-danger", method: :delete  %>
 
-<a href="/authors/delete/<%= @author.id %>"> Supprimer l'auteur</a><br>
-
-<a href="/authors">Retourner à l'index</a>
+    <%= link_to "Retour à l'index", authors_path, class: "btn btn-info"  %>
+  </ul>
+</div>
