@@ -1,0 +1,29 @@
+<div class="jumbotron">
+
+  <h1>Livre</h1>
+
+  <ul class="list-group">
+    <li class="list-group-item">
+       <%= @book.id %>
+    </li>
+
+    <li class="list-group-item">
+       <%= @book.title %>
+    </li>
+
+    <li class="list-group-item">
+       Ce livre a été écrit par <%= link_to "#{@book.author.firstname} #{@book.author.lastname}", author_path(@book.author) %>
+    </li>
+  </ul>
+    <%= link_to "Modifier", book_edit_path, class: "btn btn-warning" %>
+
+     <%= link_to "Supprimer le livre", book_path(@book), class: "btn btn-danger", method: :delete %>
+
+    <%= link_to "Retour à la liste des livres", books_path, class: "btn btn-info" %>
+
+
+
+</div>
+
+
+
