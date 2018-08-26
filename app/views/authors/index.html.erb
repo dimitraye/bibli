@@ -1,11 +1,15 @@
 <div class="jumbotron">
+
   <h1>Auteurs</h1>
+
   <ul class="list-group">
+
     <% @authors.each do |author| %>
       <li class="list-group-item">
         <%= link_to "#{author.firstname} #{author.lastname}", author_path(author)  %>
       </li>
     <% end %>
+
   </ul>
   <%= link_to "Ajouter un nouvel auteur", authors_new_path, class: "btn btn-success"  %>
 </div>

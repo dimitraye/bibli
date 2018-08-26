@@ -1,4 +1,54 @@
 Rails.application.routes.draw do
+
+  #=============================================
+  get 'acheter' => 'acheter#index'
+
+  get 'acheter/show'
+
+  get 'acheter/new'
+
+  get 'acheter/create'
+
+  get 'acheter/edit'
+
+  get 'acheter/update'
+
+  get 'acheter/destroy'
+
+  #===========================================
+
+  get 'menu' => 'menu#index'
+
+  get 'menu/show'
+
+  get 'menu/new'
+
+  get 'menu/create'
+
+  get 'menu/edit'
+
+  get 'menu/update'
+
+  get 'menu/destroy'
+
+  #=======================================================================
+
+  get 'books' => 'books#index'
+
+  get 'books/new' => 'books#new'
+
+  get 'books/:id', to: 'books#show', as: 'book'
+
+  post 'books/create' => 'books#create'
+
+  get 'books/edit/:id', to: 'books#edit', as: 'book_edit'
+
+  patch 'books/:id', to: 'books#update', as: 'book_update'
+
+  delete 'books/:id' => 'books#destroy'
+
+  #========================================================================
+
   get 'authors' => 'authors#index'
 
   get 'authors/new' => 'authors#new'
@@ -12,6 +62,8 @@ Rails.application.routes.draw do
   patch 'authors/:id' => 'authors#update'
 
   delete 'authors/:id' =>'authors#destroy'
+
+  #========================================================================
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
